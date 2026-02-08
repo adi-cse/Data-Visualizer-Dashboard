@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Visualizer</title>
+  <link rel="stylesheet" href="variables.css" />
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Data Visualizer</h1>
+    <p class="tagline">Upload CSV or JSON and explore your data as charts</p>
+  </header>
+
+  <main class="main">
+    <section class="upload-section" id="uploadSection">
+      <div class="dropzone" id="dropzone">
+        <input type="file" id="fileInput" accept=".csv,.json" hidden />
+        <p>Drag & drop a file here, or <button type="button" id="browseBtn">browse</button></p>
+        <p class="hint">Supports .csv and .json · <button type="button" id="loadSampleBtn" class="linkBtn">Load sample data</button></p>
+      </div>
+    </section>
+
+    <section class="controls-section hidden" id="controlsSection">
+      <div class="controls">
+        <label>
+          X-axis
+          <select id="selectX"></select>
+        </label>
+        <label>
+          Y-axis
+          <select id="selectY"></select>
+        </label>
+        <label>
+          Chart type
+          <select id="selectChartType">
+            <option value="line">Line</option>
+            <option value="bar">Bar</option>
+            <option value="pie">Pie</option>
+            <option value="doughnut">Doughnut</option>
+            <option value="scatter">Scatter</option>
+            <option value="radar">Radar</option>
+          </select>
+        </label>
+        <button type="button" id="btnClear">Clear & upload new</button>
+      </div>
+    </section>
+
+    <section class="preview-section hidden" id="previewSection">
+      <h2>Data preview</h2>
+      <div class="table-wrap">
+        <table id="previewTable"></table>
+      </div>
+    </section>
+
+    <section class="chart-section hidden" id="chartSection">
+      <div class="chart-section-header">
+        <h2>Chart</h2>
+        <button type="button" id="btnExportPng" class="btn-export">Export as PNG</button>
+      </div>
+      <div class="chart-container">
+        <canvas id="chartCanvas"></canvas>
+      </div>
+    </section>
+
+    <div class="message hidden" id="message"></div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="config.js"></script>
+  <script src="fileHandler.js"></script>
+  <script src="dataTable.js"></script>
+  <script src="chartManager.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
