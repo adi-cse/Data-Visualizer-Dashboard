@@ -1,0 +1,122 @@
+/* Light / White theme – applied when body has class .theme-light */
+
+body.theme-light {
+  --color-bg: #f6f8fa;
+  --color-bg-soft: #ffffff;
+  --color-surface: rgba(255, 255, 255, 0.95);
+  --color-surface-elevated: rgba(255, 255, 255, 0.98);
+  --color-border: rgba(31, 35, 40, 0.15);
+  --color-border-focus: rgba(88, 166, 255, 0.6);
+  --color-text: #1f2328;
+  --color-text-muted: #656d76;
+  --color-text-subtle: #57606a;
+  --color-accent: #0969da;
+  --color-accent-hover: #0550ae;
+  --color-accent-glow: rgba(9, 105, 218, 0.2);
+  --color-success: #1a7f37;
+  --color-success-soft: rgba(26, 127, 55, 0.12);
+  --color-error: #cf222e;
+  --color-error-soft: rgba(207, 34, 46, 0.12);
+  --shadow: 0 4px 24px rgba(31, 35, 40, 0.12);
+  --shadow-glow: 0 0 32px rgba(9, 105, 218, 0.15);
+}
+
+body.theme-light {
+  background: #f0f4f8;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(9, 105, 218, 0.08), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(9, 105, 218, 0.04), transparent),
+    radial-gradient(ellipse 60% 40% at 0% 80%, rgba(84, 101, 241, 0.04), transparent);
+}
+
+body.theme-light .header {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, transparent 100%);
+  border-bottom-color: rgba(31, 35, 40, 0.1);
+}
+
+body.theme-light .header h1 {
+  background: linear-gradient(135deg, #0969da 0%, #1f2328 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.theme-light .dropzone::before {
+  background: linear-gradient(135deg, rgba(9, 105, 218, 0.2), transparent 40%, transparent 60%, rgba(84, 101, 241, 0.15));
+}
+
+body.theme-light .dropzone:hover {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(9, 105, 218, 0.35);
+}
+
+body.theme-light .dropzone.dragover {
+  background: rgba(9, 105, 218, 0.06);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 1px rgba(9, 105, 218, 0.2), var(--shadow-glow);
+}
+
+body.theme-light .dropzone button:not(.linkBtn) {
+  background: linear-gradient(135deg, #0969da, #0550ae);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(9, 105, 218, 0.3);
+}
+
+body.theme-light .dropzone button:not(.linkBtn):hover {
+  background: linear-gradient(135deg, #0550ae, #033d84);
+  box-shadow: 0 4px 20px rgba(9, 105, 218, 0.35);
+}
+
+body.theme-light .controls select {
+  background: #fff;
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+body.theme-light #previewTable th {
+  background: rgba(31, 35, 40, 0.06);
+  color: var(--color-text);
+}
+
+body.theme-light #previewTable tbody tr:hover {
+  background: rgba(9, 105, 218, 0.06);
+}
+
+body.theme-light #previewTable td {
+  color: var(--color-text-muted);
+}
+
+body.theme-light .btn-export {
+  color: var(--color-accent);
+  background: rgba(9, 105, 218, 0.1);
+  border-color: rgba(9, 105, 218, 0.3);
+}
+
+body.theme-light .btn-export:hover {
+  background: rgba(9, 105, 218, 0.18);
+  border-color: var(--color-accent);
+  color: var(--color-accent-hover);
+}
+
+body.theme-light .message.error {
+  background: var(--color-error-soft);
+  border-color: rgba(207, 34, 46, 0.35);
+  color: #a40e26;
+}
+
+body.theme-light .message.success {
+  background: var(--color-success-soft);
+  border-color: rgba(26, 127, 55, 0.35);
+  color: #1a7f37;
+}
+
+body.theme-light .theme-toggle {
+  color: #fff;
+  background: linear-gradient(135deg, #0969da, #0550ae);
+  box-shadow: 0 2px 12px rgba(9, 105, 218, 0.35);
+}
+
+body.theme-light .theme-toggle:hover {
+  background: linear-gradient(135deg, #0550ae, #033d84);
+  box-shadow: 0 4px 20px rgba(9, 105, 218, 0.4);
+}

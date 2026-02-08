@@ -6,11 +6,15 @@
   <title>Data Visualizer</title>
   <link rel="stylesheet" href="variables.css" />
   <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="theme-light.css" />
 </head>
 <body>
   <header class="header">
-    <h1>Data Visualizer</h1>
-    <p class="tagline">Upload CSV or JSON and explore your data as charts</p>
+    <div class="header-center">
+      <h1>Data Visualizer</h1>
+      <p class="tagline">Upload CSV or JSON and explore your data as charts</p>
+    </div>
+    <button type="button" id="themeToggle" class="theme-toggle" aria-label="Switch theme">Light</button>
   </header>
 
   <main class="main">
@@ -69,6 +73,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="theme.js"></script>
   <script src="config.js"></script>
   <script src="fileHandler.js"></script>
   <script src="dataTable.js"></script>
