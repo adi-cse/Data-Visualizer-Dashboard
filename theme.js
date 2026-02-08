@@ -1,5 +1,5 @@
 /**
- * Theme toggle: Dark (default) / Light
+ * Theme toggle: Light (default) / Dark
  * Saves preference in localStorage and applies on load.
  */
 
@@ -14,9 +14,9 @@
   function getSavedTheme() {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      return saved === THEME_LIGHT ? THEME_LIGHT : THEME_DARK;
+      return saved === THEME_DARK ? THEME_DARK : THEME_LIGHT;
     } catch {
-      return THEME_DARK;
+      return THEME_LIGHT;
     }
   }
 
